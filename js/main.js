@@ -45,6 +45,7 @@ contactButton.addEventListener('mouseenter', enterContactButton, false);
 contactButton.addEventListener('mouseleave', leaveContactButton, false);
 
 
+
 //mission statement animation
 let missionWrapper = document.getElementById('mission');
 missionWrapper.innerHTML = missionWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
@@ -59,12 +60,22 @@ anime.timeline({loop: false})
 
 
 
-/*
-let animation = () => anime ({
-  targets: '.nav-ul',
-  translateX: 250,
-  duration: 3000,
-});
+//social icon animation
+const githubIcon = document.getElementById('github');
+const githubText = document.getElementById('github-text');
 
-animation();
-*/
+function animateSocial(target, height, duration) {
+    anime ({
+      targets: target,
+      translateY: height,
+      duration: duration
+    });
+  }
+
+const enterGithubIcon = () => {animateSocial(githubIcon, -10, 500)};
+const leaveGithubIcon = () => {animateSocial(githubIcon, 0, 300)};
+githubIcon.addEventListener('mouseenter', enterGithubIcon, false);
+githubIcon.addEventListener('mouseleave', leaveGithubIcon, false);
+
+githubText.addEventListener('mouseenter', enterGithubIcon, false);
+githubText.addEventListener('mouseleave', leaveGithubIcon, false);
