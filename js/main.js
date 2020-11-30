@@ -45,24 +45,11 @@ contactButton.addEventListener('mouseenter', enterContactButton, false);
 contactButton.addEventListener('mouseleave', leaveContactButton, false);
 
 
-
-//mission statement animation
-let missionWrapper = document.getElementById('mission');
-missionWrapper.innerHTML = missionWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-anime.timeline({loop: false})
-  .add({
-    targets: 'mission, .letter',
-    opacity: [0,1],
-    easing: "easeInOutQuad",
-    duration: 500,
-    delay: (el, i) => 50 * (i+1)
-  });
-
-
-
 //social icon animation
 const githubIcon = document.getElementById('github');
 const githubText = document.getElementById('github-text');
+const instagramIcon = document.getElementById('instagram');
+const instagramText = document.getElementById('instagram-text');
 
 function animateSocial(target, height, duration) {
     anime ({
@@ -76,6 +63,25 @@ const enterGithubIcon = () => {animateSocial(githubIcon, -10, 500)};
 const leaveGithubIcon = () => {animateSocial(githubIcon, 0, 300)};
 githubIcon.addEventListener('mouseenter', enterGithubIcon, false);
 githubIcon.addEventListener('mouseleave', leaveGithubIcon, false);
-
 githubText.addEventListener('mouseenter', enterGithubIcon, false);
 githubText.addEventListener('mouseleave', leaveGithubIcon, false);
+
+const enterInstagramIcon = () => {animateSocial(instagramIcon, -10, 500)};
+const leaveInstagramIcon = () => {animateSocial(instagramIcon, 0, 300)};
+instagramIcon.addEventListener('mouseenter', enterInstagramIcon, false);
+instagramIcon.addEventListener('mouseleave', leaveInstagramIcon, false);
+instagramText.addEventListener('mouseenter', enterInstagramIcon, false);
+instagramText.addEventListener('mouseleave', leaveInstagramIcon, false);
+
+
+//mission statement animation
+let missionWrapper = document.getElementById('mission');
+missionWrapper.innerHTML = missionWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+anime.timeline({loop: false})
+  .add({
+    targets: 'mission, .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 500,
+    delay: (el, i) => 50 * (i+1)
+  });

@@ -121,6 +121,8 @@ main {
 }
 
 footer {
+  display: inline-flex;
+  align-items: baseline;
   position: fixed;
   bottom: 10px;
   left: 50%;
@@ -128,19 +130,25 @@ footer {
 }
 
 .icon {
+  width: 40%;
   display: inline-flex;
   margin: 0px auto;
   flex-direction: column;
 }
 
-.social-footer {
+#github {
   box-sizing: border-box;
-  width: 40%;
-  padding-left: 5px;
+  width: 45%;
+  padding-left: 6px;
+}
+
+#instagram {
+  box-sizing: border-box;
+  width: 36%;
 }
 
 .icon h3 {
-  width: 40%;
+  width: 20%;
   color: #1f6f99;
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
