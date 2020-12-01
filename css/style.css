@@ -8,6 +8,8 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 62.5%;
 }
 
 .particles-js {
@@ -42,11 +44,11 @@ nav h1 {
   flex-grow: 1;
   padding-left: 5%;
   color: #1f6f99;
-  font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
-  font-size: 21px;
+  font-size: 2.1rem;
   line-height: 38px;
 }
+
 
 nav ul {
   padding-right: 5%;
@@ -63,9 +65,8 @@ nav li {
   min-width: 75px;
   display: inline-block;
   color: #1f6f99;
-  font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
-  font-size: 21px;
+  font-size: 2.1rem;
   line-height: 38px;
   text-align: center;
 }
@@ -79,9 +80,8 @@ nav button {
   height: 40px;
   min-width: 75px;
   display: inline-block;
-  font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
-  font-size: 21px;
+  font-size: 2.1rem;
   text-align: center;
   color: white;
   border: none;
@@ -114,9 +114,8 @@ main {
 #mission {
   width: 100%;
   color: #1f6f99;
-  font-family: "IBM Plex Sans", sans-serif;
   font-weight: 700;
-  font-size: 35px;
+  font-size: 6rem;
   text-align: center;
 }
 
@@ -129,30 +128,24 @@ footer {
   transform: translate(-50%, 0);
 }
 
+footer {
+  display: inline-flex;
+  align-items: center;
+}
+
 .icon {
   width: 40%;
+  align-items: flex-start;
   display: inline-flex;
   margin: 0px auto;
   flex-direction: column;
 }
 
-#github {
-  box-sizing: border-box;
-  width: 45%;
-  padding-left: 6px;
-}
-
-#instagram {
-  box-sizing: border-box;
-  width: 36%;
-}
-
 .icon h3 {
   width: 20%;
   color: #1f6f99;
-  font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 .icon a {
@@ -162,7 +155,17 @@ footer {
 .icon a:visited {
 }
 
+#github-icon {
+  box-sizing: border-box;
+  width: 45%;
+  padding-left: 6px;
+}
 
+#instagram-icon {
+  box-sizing: border-box;
+  width: 36%;
+  padding-bottom: 3px;
+}
 
 
 .row-1 {
@@ -191,9 +194,8 @@ footer {
 
 .statistic-info h1 {
   color: #1f6f99;
-  font-family: "IBM Plex Sans", sans-serif;
   font-weight: 500;
-  font-size: 21px;
+  font-size: 2.1rem;
   line-height: 38px;
   text-align: center;
 }

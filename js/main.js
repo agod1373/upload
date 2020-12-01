@@ -46,10 +46,10 @@ contactButton.addEventListener('mouseleave', leaveContactButton, false);
 
 
 //social icon animation
-const githubIcon = document.getElementById('github');
-const githubText = document.getElementById('github-text');
-const instagramIcon = document.getElementById('instagram');
-const instagramText = document.getElementById('instagram-text');
+const githubDiv = document.getElementById('github');
+const githubIcon = document.getElementById('github-icon');
+const instagramDiv = document.getElementById('instagram');
+const instagramIcon = document.getElementById('instagram-icon');
 
 function animateSocial(target, height, duration) {
     anime ({
@@ -59,19 +59,43 @@ function animateSocial(target, height, duration) {
     });
   }
 
-const enterGithubIcon = () => {animateSocial(githubIcon, -10, 500)};
-const leaveGithubIcon = () => {animateSocial(githubIcon, 0, 300)};
-githubIcon.addEventListener('mouseenter', enterGithubIcon, false);
-githubIcon.addEventListener('mouseleave', leaveGithubIcon, false);
-githubText.addEventListener('mouseenter', enterGithubIcon, false);
-githubText.addEventListener('mouseleave', leaveGithubIcon, false);
+const enterGithubDiv = () => {animateSocial(githubIcon, -10, 500)};
+const leaveGithubDiv = () => {animateSocial(githubIcon, 0, 300)};
+githubDiv.addEventListener('mouseenter', enterGithubDiv, false);
+githubDiv.addEventListener('mouseleave', leaveGithubDiv, false);
 
-const enterInstagramIcon = () => {animateSocial(instagramIcon, -10, 500)};
-const leaveInstagramIcon = () => {animateSocial(instagramIcon, 0, 300)};
-instagramIcon.addEventListener('mouseenter', enterInstagramIcon, false);
-instagramIcon.addEventListener('mouseleave', leaveInstagramIcon, false);
-instagramText.addEventListener('mouseenter', enterInstagramIcon, false);
-instagramText.addEventListener('mouseleave', leaveInstagramIcon, false);
+const enterInstagramDiv = () => {animateSocial(instagramIcon, -10, 500)};
+const leaveInstagramDiv = () => {animateSocial(instagramIcon, 0, 300)};
+instagramDiv.addEventListener('mouseenter', enterInstagramDiv, false);
+instagramDiv.addEventListener('mouseleave', leaveInstagramDiv, false);
+
+
+const body = document.body;
+
+function darkMode() {
+  body.style.backgroundColor = '#000';
+}
+
+function lightMode() {
+  body.style.backgroundColor = '#fff';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //mission statement animation
