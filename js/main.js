@@ -80,6 +80,84 @@ function lightMode() {
   body.style.backgroundColor = '#fff';
 }
 
+/*
+const circle = document.getElementById('circle');
+
+const zChange = () => {circle.style.zIndex = "-10"}
+
+function pageTrans() {
+  anime ({
+    targets: circle,
+    opacity: 0,
+    easing: 'easeInOutQuint',
+    duration: 1000
+  });
+  setTimeout(zChange, 1000);
+}
+
+aboutButton.addEventListener('click', pageTrans, false);
+
+
+function navTrans() {
+    anime ({
+      targets: [signInButton, contactButton, aboutButton, homeButton],
+      translateY: 200,
+      delay: anime.stagger(100)
+    });
+}
+
+const main = document.getElementById('main');
+
+function fadeIn() {
+  anime ({
+    targets: main,
+    opacity: 1,
+    duration: 10000
+  })
+}
+*/
+
+const background = document.getElementById('background');
+const halfWidth = window.innerWidth / 2;
+const main = document.getElementById('main');
+
+function dropTrans(){
+  let tl = anime.timeline({
+    targets: background
+  })
+  tl
+  .add({
+    translateX: halfWidth,
+    easing: 'easeOutQuad',
+    duration: 700
+  })
+  tl
+  .add({
+    borderRadius: ['50%', '0%'],
+  })
+  tl.add({
+    translateX: '50px',
+    translateY: '-50vh',
+    width: '100%',
+    height: '100vh'
+  })
+  tl.add({
+    opacity: 1
+  })
+  tl.add({
+    targets: main,
+    opacity: 1
+  });
+}
+
+dropTrans();
+
+
+
+
+
+
+
 
 
 
