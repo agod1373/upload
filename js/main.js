@@ -47,9 +47,9 @@ contactButton.addEventListener('mouseleave', leaveContactButton, false);
 
 //social icon animation
 const githubDiv = document.getElementById('github');
-const githubIcon = document.getElementById('github-icon');
+const githubIcon = document.getElementById('github-social');
 const instagramDiv = document.getElementById('instagram');
-const instagramIcon = document.getElementById('instagram-icon');
+const instagramIcon = document.getElementById('instagram-social');
 
 function animateSocial(target, height, duration) {
     anime ({
@@ -127,6 +127,7 @@ function dropTrans(){
   })
   tl
   .add({
+    delay: 1000,
     translateX: halfWidth,
     easing: 'easeOutQuad',
     duration: 700
@@ -136,10 +137,12 @@ function dropTrans(){
     borderRadius: ['50%', '0%'],
   })
   tl.add({
+    easing: 'easeInExpo',
     translateX: '50px',
     translateY: '-50vh',
     width: '100%',
-    height: '100vh'
+    height: '100vh',
+    duration: 700
   })
   tl.add({
     opacity: 1
