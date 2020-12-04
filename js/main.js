@@ -166,9 +166,21 @@ let navButton = document.getElementById("nav-bar");
 let navUl = document.getElementById("nav-ul");
 
 
+function displayNavSetup() {
+  window.scrollTo(0, 0);
+}
 
+let displayNavClickCount = 0;
 function displayNav() {
-  if (navUl.style.display === 'none'){
+  displayNavClickCount++;
+  if (displayNavClickCount === 1){
+    setTimeout(displayNavSetup, 100);
+    navUl.style.display = "flex";
+    navUl.style.zIndex = "10";
+    navUl.style.position = "static";
+  }
+  else if (navUl.style.display === 'none'){
+    setTimeout(displayNavSetup, 100);
     navUl.style.display = "flex";
     navUl.style.zIndex = "10";
     navUl.style.position = "static";
@@ -177,9 +189,25 @@ function displayNav() {
     navUl.style.zIndex = "-100";
     navUl.style.position = "fixed";
   }
+
 }
 
-navButton.addEventListener('click', displayNav);
+navButton.addEventListener('click', displayNav, false);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
