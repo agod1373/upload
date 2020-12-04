@@ -121,7 +121,7 @@ main {
 }
 
 
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   #mission {
     width: 100%;
     color: #1f6f99;
@@ -186,19 +186,15 @@ main {
 }
 
 @media screen and (max-width: 450px) {
-  #quick-register {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 150px auto;
-    min-width: 330px;
-    max-width: 330px;
-    min-height: 500px;
+  #register-background {
+    opacity: 0.5;
+    border-radius: 5%;
+    background-color: #fcb3b1;
+    width: 100%;
+    height: inherit;
+    margin-top: 50px;
   }
 }
-
-
-
-
 
 
 #register-background {
@@ -209,14 +205,17 @@ main {
   height: inherit;
 }
 
-
+#register-background h1 {
+  text-align: center;
+  margin-top: 10px;
+}
 
 .quick-register-form {
   width: 100%;
   font-size: 2.1rem;
 }
 
-.quick-register-form input[id="firstName"], input[id="lastName"] {
+.quick-register-form input {
   box-sizing: border-box;
   padding: 15px 15px;
   margin: 10px 2%;
@@ -228,22 +227,18 @@ main {
 }
 
 .quick-register-form input[id="email"] {
-  box-sizing: border-box;
   margin: 15px 10%;
-  padding: 15px 15px;
   width: 80%;
-  min-height: 40px;
-  border-radius: 10px;
-  border: none;
-  opacity: 0.8;
+}
+
+.quick-register-form input[id="userName"] {
+  margin: 15px 10%;
+  width: 80%;
 }
 
 .quick-register-form input[type="submit"] {
-  box-sizing: border-box;
   margin: 15px 37.5%;
-  width: 25%;
-  border-radius: 4px;
-  border: none;
+  width: 30%;
 }
 
 
