@@ -132,7 +132,7 @@ main {
   #quick-register {
     display: flex;
     flex-wrap: wrap;
-    margin: 50px auto;
+    margin: 100px auto;
     min-width: 330px;
     max-width: 330px;
     min-height: 500px;
@@ -185,6 +185,17 @@ main {
   }
 }
 
+@media screen and (max-width: 450px) {
+  #quick-register {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 150px auto;
+    min-width: 330px;
+    max-width: 330px;
+    min-height: 500px;
+  }
+}
+
 
 
 
@@ -197,6 +208,8 @@ main {
   width: 100%;
   height: inherit;
 }
+
+
 
 .quick-register-form {
   width: 100%;
