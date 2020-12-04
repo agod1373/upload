@@ -132,7 +132,7 @@ function dropTrans(){
   tl
   .add({
     delay: 1000,
-    translateX: halfWidth,
+    translateX: (halfWidth+25),
     easing: 'easeOutQuad',
     duration: 700
   })
@@ -162,7 +162,23 @@ dropTrans();
 
 
 
+let navButton = document.getElementById("nav-bar");
+let navUl = document.getElementById("nav-ul");
 
+function displayNav() {
+  if (navUl.style.display === 'none'){
+    navUl.style.display = "flex";
+    navUl.style.zIndex = "10";
+    navUl.style.position = "static";
+  } else {
+    navUl.style.display = "none";
+    navUl.style.zIndex = "-100";
+    navUl.style.position = "fixed";
+  }
+
+}
+
+navButton.addEventListener('click', displayNav, false);
 
 
 

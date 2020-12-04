@@ -18,11 +18,6 @@
   opacity: 0;
 }
 
-.temporary {
-  width: 100%;
-  display: none;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -44,7 +39,6 @@
 
 body {
   background-color: #c4a9a9;
-  width: 100%;
 }
 
 main {
@@ -53,57 +47,38 @@ main {
 }
 
 nav {
-  display: inline-flex;
-  justify-content: space-between;
+  display: flex;
   align-items: center;
-  box-sizing: border-box;
   width: 100%;
   padding: 30px 0px;
 }
 
 nav h1 {
-  flex-grow: 1;
   padding-left: 5%;
   color: #1f6f99;
   font-weight: 400;
   font-size: 2.1rem;
   line-height: 38px;
+  margin-right: auto;
 }
 
-
 nav ul {
-  padding-right: 5%;
-  box-sizing: border-box;
-  text-align: center;
+  margin-left: auto;
 }
 
 nav li {
-  flex-grow: 1;
-  margin-left: 25px;
-  box-sizing: border-box;
-  width: 10%;
-  height: 40px;
-  min-width: 75px;
   display: inline-block;
-  color: #1f6f99;
-  font-weight: 400;
+  margin-left: 25px;
+  width: 10%;
+  min-width: 75px;
+  height: 40px;
   font-size: 2.1rem;
   line-height: 38px;
-  text-align: center;
 }
 
 nav button {
-  flex-grow: 1;
-  margin-left: 25px;
-  box-sizing: border-box;
   padding: 0px 0px 2px 0px;
-  width: 10%;
-  height: 40px;
-  min-width: 75px;
-  display: inline-block;
-  font-weight: 400;
-  font-size: 2.1rem;
-  text-align: center;
+  width: 75px;
   color: white;
   border: none;
   border-radius: 11px 16px;
@@ -119,17 +94,11 @@ nav button:hover {
 }
 
 main {
-  display: inline-flex;
-  width: 100%;
-  flex-wrap: wrap;
+  display: grid;
 }
 
 .intro {
-  display: inline-flex;
-  flex-wrap: wrap;
-  width: 100%;
   height: 100px;
-  box-shadow: 5px;
 }
 
 @media screen and (min-width: 601px) {
@@ -139,6 +108,17 @@ main {
     font-weight: 700;
     font-size: 6rem;
     text-align: center;
+  }
+  #quick-register {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    min-width: 330px;
+    max-width: 330px;
+    min-height: 500px;
+  }
+  .nav-bar {
+    display: none;
   }
 }
 
@@ -151,30 +131,72 @@ main {
     font-size: 5rem;
     text-align: center;
   }
+  #quick-register {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    min-width: 330px;
+    max-width: 330px;
+    min-height: 500px;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-bar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: 380px;
+    padding-bottom: 7px;
+  }
+  .line {
+    width: 30px;
+    height: 4px;
+    background-color: #fcb3b1;
+    margin: 4px;
+  }
+  nav h1 {
+    padding-right: 10%;
+    font-size: 2.7rem;
+  }
+  nav ul {
+    position: fixed;
+    z-index: -10;
+    top: 50px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+  }
+  nav li {
+    width: 100%;
+    font-size: 3rem;
+    margin: 50px auto;
+  }
+  nav li button {
+    padding-left: 7px;
+    width: 100px;
+    display: flex;
+    margin: 0px auto;
+    height: 45px;
+    font-size: 3rem;
+  }
 }
 
 
-#quick-register {
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  margin-top: 50px;
-  min-width: 350px;
-  max-width: 350px;
-  min-height: 50vh;
-}
+
+
+
 
 #register-background {
-  opacity: 0.4;
+  opacity: 0.5;
   border-radius: 5%;
-  border-top: 25px;
-  border-bottom: 25px;
   background-color: #fcb3b1;
-  margin: 0 auto;
   width: 100%;
   height: inherit;
-  margin: 0px auto;
 }
 
 .quick-register-form {
@@ -209,15 +231,23 @@ main {
   margin: 15px 37.5%;
   width: 25%;
   border-radius: 4px;
+  border: none;
 }
 
 
 
-
+/*FOOTER*/
 footer {
-  display: grid;
-  grid-template-columns: 80px 80px;
-  margin: 0px auto;
+  display: inline-flex;
+  width: 100vw;
+}
+
+.socials {
+  display: inline-flex;
+  width: 20vw;
+  min-width: 200px;
+  margin: 25px auto 0px auto;
+  justify-content: space-around;
 }
 
 .icon {
