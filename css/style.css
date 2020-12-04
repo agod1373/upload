@@ -132,12 +132,25 @@ main {
   box-shadow: 5px;
 }
 
-#mission {
-  width: 100%;
-  color: #1f6f99;
-  font-weight: 700;
-  font-size: 6rem;
-  text-align: center;
+@media screen and (min-width: 601px) {
+  #mission {
+    width: 100%;
+    color: #1f6f99;
+    font-weight: 700;
+    font-size: 6rem;
+    text-align: center;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  #mission {
+    width: 100%;
+    color: #1f6f99;
+    font-weight: 700;
+    font-size: 5rem;
+    text-align: center;
+  }
 }
 
 
@@ -146,7 +159,6 @@ main {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  background-color: red;
   margin-top: 50px;
   min-width: 350px;
   max-width: 350px;
