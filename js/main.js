@@ -121,6 +121,10 @@ const background = document.getElementById('background');
 const halfWidth = window.innerWidth / 2;
 const main = document.getElementById('main');
 
+function finishTrans(){
+    body.style.backgroundColor = 'white';
+}
+
 function dropTrans(){
   let tl = anime.timeline({
     targets: background
@@ -151,6 +155,7 @@ function dropTrans(){
     targets: main,
     opacity: 1
   });
+  setTimeout(finishTrans, 5000);
 }
 
 dropTrans();
