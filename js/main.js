@@ -165,6 +165,8 @@ dropTrans();
 let navButton = document.getElementById("nav-bar");
 let navUl = document.getElementById("nav-ul");
 
+
+
 function displayNav() {
   if (navUl.style.display === 'none'){
     navUl.style.display = "flex";
@@ -175,25 +177,9 @@ function displayNav() {
     navUl.style.zIndex = "-100";
     navUl.style.position = "fixed";
   }
-
 }
 
-navButton.addEventListener('click', displayNav, false);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+navButton.addEventListener('click', displayNav);
 
 
 
